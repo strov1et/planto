@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+// mixins
+@mixin dFlex(
+  $justifyContent: flex-start,
+  $alignItems: flex-start,
+  $columnGap: 0,
+  $rowGap: 0
+) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  column-gap: $columnGap;
+  row-gap: $rowGap;
+}
+
+// variables
+// font sizes
+$fontSizeS: 17px;
+$fontSizeNormal: 22px;
+$fontSizeL: 35px;
+$fontSizeXL: 100px;
+
+// font colors
+$primaryColor: #fff;
+$secondaryColor: rgba(255, 255, 255, 0.75);
+// font families
+$titleFont: "Dancing Script";
+$textFont: "Playfair Display", serif;
+
+body {
+  background-color: #1a2217;
+  font-family: $textFont;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 2px solid red;
+
+}
+
+// burger menu styles
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+
+  span {
+    width: 25px;
+    height: 3px;
+    background-color: $primaryColor;
+    transition: 0.3s ease;
+  }
+}
