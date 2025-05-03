@@ -96,7 +96,6 @@
 
     .mainSection {
       @include dFlex(center, center, 0, 0);
-      
 
       .leftSide {
         @include dFlex(flex-start, flex-start, 0, 100px);
@@ -158,22 +157,30 @@
         }
       }
     }
-  }
-  
+  } // sellingSection
+  .sellingPlantsWrapper {
+    .plantCard {
+      width: 47%;
+      margin: 0 auto;
     }
-    // sellingSection
-    .sellingPlantsWrapper {
-      .plantCard {
-        width: 47%;
-        margin: 0 auto;
+  }
+
+  // footer
+  footer {
+    .footerDiv {
+      .footerCard {
+        width: 100%;
+        
       }
     }
-  
+  }
+}
+
 @media (max-width: 480px) {
   .sellingPlantsWrapper {
     .plantCard {
       width: 90% !important;
-      max-width: 100% ;
+      max-width: 100%;
     }
   }
 }
