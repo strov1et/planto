@@ -1,10 +1,10 @@
 .aboutUs {
   .aboutUsDiv {
-    @include dFlex(center, center,0,0);
+    @include dFlex(center, center, 0, 0);
     flex-wrap: wrap;
     background: linear-gradient(135deg, #f3f6ea, #dfe6c8, #414a27);
 
-    border-radius: 50px; 
+    border-radius: 50px;
     margin-top: 30px;
     .LeftAbout {
       width: 400px;
@@ -16,17 +16,16 @@
       }
     }
     .RightAbout {
-      
       width: 400px;
       height: 500px;
-      @include dFlex (center,center,0,30px);
+      @include dFlex(center, center, 0, 30px);
       flex-direction: column;
       h3 {
         font-size: 50px;
         color: #2f4f2f;
         font-family: "Handlee", cursive;
       }
-      p{
+      p {
         color: #3e5130;
         width: 300px;
         height: auto;

@@ -61,7 +61,7 @@ footer {
       &.right {
         display: flex;
         flex-direction: column;
-        img{
+        img {
           width: 150px;
           height: 150px;
         }
@@ -77,14 +77,13 @@ footer {
           color: #333;
 
           &::placeholder {
-            color: #aaa;
+            color: #9a9999;
           }
 
           &:focus {
             outline: 2px solid #ffccd5;
             outline-offset: 2px;
           }
-          
         }
       }
     }
