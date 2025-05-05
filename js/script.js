@@ -14,33 +14,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-$(function(){
-  $('.multiple-items').slick({
- infinite: true,
- // რამდენი სურათი გამოჩნდეს
- slidesToShow: 1,
- // სლაიდის დროს რამდენი ელემნტით გადავიდეს 
- slidesToScroll: 1,
- // რომ გამოჩნდეს ღილაკები
- arrows: true,
- // რომ გამოჩნდეს ბურთულები
- dots:true,
- // responsiv-ის კოდი
- responsive: [
-     {
-       breakpoint: 768,
-       settings: {
-         slidesToShow: 2,
-         slidesToScroll: 1
-       }
-     },
-     {
-       breakpoint: 480,
-       settings: {
-         slidesToShow: 1,
-         slidesToScroll: 1
-       }
-     }
-   ]
- });    
+$(function () {
+  $(".multiple-items").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+});
+
+document.getElementById("search-icon").addEventListener("click", function () {
+  const input = document.getElementById("search-input");
+  input.classList.toggle("show");
+  if (input.classList.contains("show")) {
+    input.focus();
+  }
 });

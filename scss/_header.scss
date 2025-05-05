@@ -1,48 +1,73 @@
 header {
-    position: sticky;
-    width: 100%;
-    margin: 0 auto;
-    z-index: 99999;
-  
-    top: 0;
-    left: 0;
-  
-    .headerDiv {
-      background-color: #192116;
-      @include dFlex(space-between, center, 0, 0);
-  
-      .logoWrapper {
-        @include dFlex(flex-start, center, 7px, 0);
-  
-        p {
-          color: $primaryColor;
-          font-size: $fontSizeNormal;
-          font-weight: 700;
-          letter-spacing: 2px;
+  position: sticky;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 99999;
+  top: 0;
+
+  .headerDiv {
+    background-color: #192116;
+    @include dFlex(space-between, center, 0, 0);
+    padding: 10px;
+
+    .logoWrapper {
+      @include dFlex(flex-start, center, 7px, 0);
+
+      p {
+        color: $primaryColor;
+        font-size: $fontSizeNormal;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+    }
+
+    .navLinks {
+      ul {
+        @include dFlex(center, center, 40px, 0);
+      }
+
+      a {
+        font-size: $fontSizeS;
+        color: $secondaryColor;
+        text-decoration: none;
+        transition: font-family 0.3s ease, color 0.3s ease;
+
+        &:focus {
+          outline: 2px solid #4caf50;
         }
       }
-  
-      .navLinks {
-        ul {
-          @include dFlex(center, center, 40px, 0);
-        }
-  
-        a {
-          font-size: $fontSizeS;
-          color: $secondaryColor;
-          font-family: "Inter", sans-serif;
-          text-decoration: none;
-          transition: font-family 0.3s ease, color 0.3s ease;
-        }
-  
-        ul li a:hover {
-          font-family: "Merriweather", serif;
-          color: #4caf50;
-        }
+
+      ul li a:hover {
+        font-family: "Handlee", cursive;
+        color: #4caf50;
       }
-      .icons {
-        @include dFlex(flex-start, center, 10px, 0);
+    }
+    .icons {
+      @include dFlex(flex-start, center, 10px, 0);
+      .search-wrapper {
+        position: relative;
+        display: inline-block;
+      }
+
+      #search-input {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 0;
+        opacity: 0;
+        padding: 5px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        background: white;
+        transition: width 0.3s ease, opacity 0.3s ease;
+        pointer-events: none;
+      }
+
+      #search-input.show {
+        width: 150px;
+        opacity: 1;
+        pointer-events: auto;
       }
     }
   }
-  
+}

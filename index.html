@@ -6,9 +6,8 @@
     <title>Planto</title>
 
     <link rel="stylesheet" href="./css/style.css" />
-
     <link rel="icon" href="./images/plant_logo.svg" type="image/svg+xml" />
-    <!-- axali -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="./css/slick.css" />
     <link
@@ -20,10 +19,12 @@
   <body>
     <header>
       <div class="headerDiv container">
-        <div class="logoWrapper">
-          <img src="./images/logo.svg" alt="Planto logo" />
-          <p>PLANTO.</p>
-        </div>
+        <a href="#Home">
+          <div class="logoWrapper">
+            <img src="./images/logo.svg" alt="Planto logo" />
+            <p>PLANTO.</p>
+          </div>
+        </a>
 
         <div class="burger" id="burger">
           <span></span>
@@ -33,21 +34,25 @@
 
         <nav class="navLinks" id="navLinks">
           <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">PLANT TYPE</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#Home">HOME</a></li>
+            <li><a href="#PlantTypes">PLANT TYPE</a></li>
+            <li><a href="#aboutUs">ABOUT US</a></li>
+            <li><a href="#Contact">CONTACT</a></li>
           </ul>
         </nav>
 
         <div class="icons">
-          <img src="./images/search.svg" alt="Search icon" />
+          <div class="search-wrapper">
+            <img src="./images/search.svg" alt="Search icon" id="search-icon" />
+            <input type="text" id="search-input" placeholder="Search..." />
+          </div>
           <img src="./images/bag.svg" alt="Shopping bag icon" />
         </div>
       </div>
     </header>
 
     <!-- main -->
-    <main>
+    <main id="Home">
       <div class="background">
         <div
           class="mainSection container"
@@ -60,33 +65,14 @@
 
             <div class="review">
               <div class="name">
-                <img
-                  class="avatar"
-                  src="./images/alena.svg"
-                  alt=""
-                  sizes=""
-                  srcset=""
-                />
+                <img class="avatar" src="./images/alena.svg" alt="" />
                 <div class="starsWrapper">
                   <p>alena Patel</p>
-                  <img class="stars" src="images/Star 3.svg" alt="" srcset="" />
-                  <img
-                    class="stars"
-                    src="images/Star 3.svg"
-                    alt=""
-                    srcset=""
-                  /><img
-                    class="stars"
-                    src="images/Star 3.svg"
-                    alt=""
-                    srcset=""
-                  /><img
-                    class="stars"
-                    src="images/Star 3.svg"
-                    alt=""
-                    srcset=""
-                  />
-                  <img class="stars" src="images/Star 5.svg" alt="" srcset="" />
+                  <img class="stars" src="images/Star 3.svg" alt="" />
+                  <img class="stars" src="images/Star 3.svg" alt="" />
+                  <img class="stars" src="images/Star 3.svg" alt="" />
+                  <img class="stars" src="images/Star 3.svg" alt="" />
+                  <img class="stars" src="images/Star 5.svg" alt="" />
                 </div>
               </div>
               <p class="reviewText">
@@ -98,12 +84,7 @@
           </div>
 
           <div class="rightSide">
-            <img
-              class="plantImg"
-              src="./images/dieffenbachia.svg"
-              alt=""
-              srcset=""
-            />
+            <img class="plantImg" src="./images/dieffenbachia.svg" alt="" />
             <div class="infoWrapper">
               <h3>Trendy House Plant</h3>
               <p>Calathea plant</p>
@@ -137,11 +118,11 @@
               </div>
 
               <div class="leftSideofPlants">
-                <h3>Calathea</h3>
+                <h3>Fasciata</h3>
                 <p>
-                  Calathea is a tropical houseplant with bold, patterned leaves.
-                  It prefers low light and high humidity. Its leaves move up at
-                  night.
+                  Houseplant known for its large, round leaves with dark green
+                  and light green banded patterns. It thrives in indirect light
+                  and high humidity, making it ideal for indoor spaces.
                 </p>
                 <p>100 $</p>
                 <button>Explore</button>
@@ -150,7 +131,8 @@
           </div>
         </div>
       </div>
-      <section class="sellingItmesSection container">
+
+      <section id="PlantTypes" class="sellingItemsSection container">
         <h3>Our Top Selling</h3>
         <div class="sellingPlantsWrapper">
           <div class="plantCard">
@@ -250,6 +232,25 @@
         </div>
       </section>
 
+      <section id="aboutUs" class="aboutUs">
+        <div class="aboutUsDiv container">
+          <div class="LeftAbout">
+            <img src="./images/ficus.jpg" alt="" />
+          </div>
+          <div class="RightAbout">
+            <h3>About Us</h3>
+            <p>
+              At Planto, we believe beauty lives in the details. Inspired by the
+              elegance of nature and the charm of modern simplicity, our work
+              blends art and design to create spaces that feel alive. Whether
+              it's through botanical illustrations, unique home accents, or
+              curated greenery, we aim to bring a sense of calm and inspiration
+              into every corner of your life.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="reviews" class="review-slider-section container">
         <h2 class="section-title">What Our Customers Say</h2>
         <div class="slider multiple-items">
@@ -292,13 +293,13 @@
         </div>
       </section>
     </main>
-    <footer>
+
+    <footer id="Contact">
       <div class="footerDiv container">
         <div class="footerCard left">
           <h4>Contact Us</h4>
           <p>Phone: <a href="tel:9297024010">929-702-4010</a></p>
           <p>Email: <a href="mailto:planto@gmail.com">planto@gmail.com</a></p>
-
           <section>
             <h3>Find Us Here</h3>
             <iframe
@@ -314,19 +315,33 @@
         </div>
         <div class="footerCard right">
           <h4>Lets Be Friends!</h4>
-          <p>Subscribe to receive fun updates. No spam ever.
-          </p>
-          <input type="email" placeholder="Enter your email" class="email-input" />
-
+          <p>Subscribe to receive fun updates. No spam ever.</p>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="email-input"
+          />
+          <a href="https://geolab.edu.ge/" target="_blank">
+            <img src="./images/geolabLogo.svg" alt=""
+          /></a>
         </div>
-        
       </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Slick Js file -->
+
+    <!-- Slick Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Custom scripts -->
     <script src="./js/script.min.js"></script>
-    <!-- Main js with code -->
     <script src="./js/script.js"></script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
