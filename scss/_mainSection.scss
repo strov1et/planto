@@ -12,7 +12,7 @@ main {
     flex-wrap: wrap;
   }
   .leftSide {
-    @include dFlex(space-between, flex-start, 350px, column);
+    @include dFlex(space-between, flex-start, 0, 350px);
 
     flex-direction: column;
     max-width: 380px;
